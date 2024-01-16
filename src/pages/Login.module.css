@@ -1,0 +1,183 @@
+:root {
+  --background: #1f2336;
+  --box-background: #313852;
+  --secondary: #f1f1f1;
+  --primary: #f4bd50;
+}
+
+.login {
+  margin: 2rem;
+  display: flex;
+  place-items: center;
+  background-color: var(--color-dark--1);
+  min-height: calc(100vh - 5rem);
+}
+
+.form {
+  background-color: var(--color-dark--2);
+  border-radius: 7px;
+  padding: 1.75rem 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  /* Different from other form */
+  width: 39.5rem;
+  margin: 6rem auto;
+}
+
+.divider {
+  color: var(--color-light--3);
+  text-align: center;
+  letter-spacing: 5px;
+  position: relative;
+  font-size: 1.5rem;
+  border-radius: 1px;
+  width: 100%;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  height: 1.5px;
+  width: 10rem;
+  background-color: var(--color-light--3);
+  position: absolute;
+  opacity: 0.5;
+}
+
+.divider::before {
+  left: 60%;
+  top: 49%;
+}
+
+.divider::after {
+  right: 60%;
+  top: 49%;
+}
+
+.google__verifying {
+  position: relative;
+  bottom: -0.1rem;
+  right: -9.5rem;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  border-radius: 50%;
+  border-top: 5px solid red;
+  border-left: 5px solid yellowgreen;
+  border-bottom: 5px solid green;
+  border-right: 5px solid blue;
+  animation: rotate 1s infinite linear;
+}
+
+.container {
+  position: absolute;
+}
+
+.footBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-right: 5px;
+}
+
+.footBtn a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 400;
+  cursor: pointer;
+  color: #1dc677;
+}
+
+.footBtn a:hover {
+  text-decoration: underline;
+  color: #1dc677;
+  color: #bbd5ca;
+}
+
+.input__wrapper {
+  position: relative;
+  padding: 10px 0 0;
+}
+
+.input__field {
+  outline: 1.5px solid var(--secondary);
+  height: 41px;
+  border-radius: 5px;
+  color: var(--color-white--0);
+  border: none;
+  font-family: inherit;
+  margin-right: 8px;
+  background: transparent;
+  max-width: 330px;
+  max-height: 68px;
+  transition: all 0.2s;
+
+  width: 100%;
+  color-scheme: dark;
+  padding: 0.6rem 3.5rem 0.6rem 1.2rem;
+  background-color: var(--color-dark--2);
+}
+
+.input__field::placeholder {
+  color: transparent;
+}
+
+.input__icon {
+  position: absolute;
+  right: -5px;
+  bottom: -8px;
+  width: 28px;
+  height: 28px;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.i__icon {
+  position: absolute;
+  right: -1px;
+  bottom: -5px;
+  width: 25px;
+  height: 25px;
+  color: white;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+}
+
+.input__field:placeholder-shown ~ .input__label {
+  font-size: 1.75rem;
+  cursor: text;
+  color: var(--secondary);
+  top: 15px;
+}
+
+.input__label,
+.input__field:focus ~ .input__label {
+  position: absolute;
+  top: -2px;
+  background-color: var(--color-dark--2);
+  font-size: 1.5rem;
+  padding: 0 4px;
+  display: block;
+  left: 8px;
+  color: var(--color-dark--1);
+  transition: 0.3s;
+}
+
+.input__field:focus ~ .input__label {
+  color: var(--background);
+}
+
+.input__field:focus {
+  outline: 1.5px solid var(--color-light--1);
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}

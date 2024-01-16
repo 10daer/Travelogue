@@ -1,0 +1,74 @@
+:root {
+  --notification-background: #232629;
+  --notification-primary: #aaec8a;
+  --background: #faf9ff;
+}
+
+.notification {
+  position: absolute;
+  width: max-content;
+  /* max-width: 80px; */
+  left: 50%;
+  right: 0;
+  top: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 7px;
+  background-color: var(--notification-background);
+  /* color: var(--notification-primary); */
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-30px);
+  /* opacity: 0;
+  visibility: hidden;
+  animation: fade-in 5s linear; */
+  z-index: 1999;
+}
+
+.icon {
+  height: 26px;
+  width: 26px;
+  margin-right: 4px;
+}
+
+.notification__body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.75rem;
+  padding: 16px 8px;
+}
+
+/* .notification__progress {
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  width: calc(100% - 8px);
+  height: 3px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: linear-gradient(
+    to right,
+    var(--notification-background),
+    var(--notification-primary)
+  );
+  border-radius: 15px;
+  animation: progress 4.75s 0.25s linear;
+}
+
+@keyframes fade-in {
+  5% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  95% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes progress {
+  to {
+    transform: scaleX(1);
+  }
+} */

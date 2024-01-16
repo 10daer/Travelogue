@@ -1,0 +1,10 @@
+.logo {
+  height: 5rem;
+}
+
+.reduce {
+  height: 3.5rem;
+  justify-self: center;
+  position: relative;
+  right: -10rem;
+}
